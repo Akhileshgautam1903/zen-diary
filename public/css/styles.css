@@ -56,6 +56,11 @@ p{
     transition: transform ease 0.3s, box-shadow ease 0.3s;
 }
 
+.time{
+    font-size: 0.75rem;
+    text-decoration: underline;
+}
+
 .post p{
     margin-bottom: 2px;
 }
