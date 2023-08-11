@@ -58,7 +58,7 @@ p{
 
 .time{
     font-size: 0.75rem;
-    text-decoration: underline;
+    font-weight: bold;
 }
 
 .post p{

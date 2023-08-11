@@ -12,7 +12,7 @@
                 <div class="post mb-3" style="background-color: <%= allColors[index]%>;">
                     <h3> <%= post.title %> </h3>
                     <p> <%= post.body.slice(0, 100) + "..." %> <a href=" /posts/<%= post._id %> "><span class="material-symbols-rounded logo-right">arrow_circle_right</span><span class="link"></span></a> </p>
-                    <p class="time"> <%= formatFunc(new Date(post.createdAt), { addSuffix: true })%></p>
+                    <p class="time my-1"> <%= formatFunc(new Date(post.createdAt), { addSuffix: true })%></p>
                 </div>
             <% }) %>            
         </div>
