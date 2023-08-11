@@ -1,0 +1,21 @@
+<%- include('partials/header'); -%>
+
+    <div class="content">
+        <div class="all-posts">
+            <div class="d-flex justify-space-betweeen mb-4 align-items-end">
+                <h3 class="mb-0">All posts</h3>
+                <button onclick="location.href='/new';" class="btn create-btn ms-auto mt-3">Create your Journal</button>
+            </div>
+            
+            <% postContent.reverse().forEach((post) => { %>
+                <% var index = Math.floor(Math.random() * 6) %>
+                <div class="post mb-3" style="background-color: <%= allColors[index]%>;">
+                    <h3> <%= post.title %> </h3>
+                    <p> <%= post.body.slice(0, 100) + "..." %> <a href=" /posts/<%= post._id %> "><span class="material-symbols-rounded logo-right">arrow_circle_right</span><span class="link"></span></a> </p>
+                    <p> <%= formatFunc(new Date(post.createdAt), { addSuffix: true })%></p>
+                </div>
+            <% }) %>            
+        </div>
+    </div>
+    
+<%- include('partials/footer'); -%>
